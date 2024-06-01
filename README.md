@@ -1,14 +1,25 @@
 # Fastify-Prisma-Zod-Swagger
 
-Boilerplate para inicio de projetos com Fastify, Prisma, Zod e Swagger
+Boilerplate para início de projetos com Fastify, Prisma, Zod e Swagger.
+
+## Tecnologias Utilizadas
+
+- **Fastify**: Framework web focado em desempenho e baixo overhead.
+- **Prisma**: ORM moderno e intuitivo para Node.js e TypeScript.
+- **Zod**: Biblioteca de validação e definição de esquemas para TypeScript.
+- **Swagger**: Ferramenta para documentação de APIs RESTful.
 
 ## Setup
 
-Instalando todas as dependências
+### 1. Instalação das Dependências
+
+Para instalar todas as dependências, execute:
 
 ```bash
 npm i
 ```
+
+### 2. Configuração do Ambiente
 
 Copie o `.env.example` para `.env`
 
@@ -16,38 +27,69 @@ Copie o `.env.example` para `.env`
 cp .env.exmaple .env
 ```
 
-Adicione as infomrações de acordo com o `.env`
+Em seguida, adicione as informações necessárias ao arquivo `.env` de acordo com as configurações no `config/envs.ts`.
 
-## Rodando a aplicação localmente
+## Desenvolvimento
 
-Altere no `.env` o `NODE_ENV` para `development`
+### 1. Configuração do Ambiente de Desenvolvimento
 
-Execute
+Altere a variável `NODE_ENV` no arquivo `.env` para `development`:
+
+```bash
+NODE_ENV=development
+```
+
+### 2. Execução da Aplicação
+
+Para iniciar a aplicação em modo de desenvolvimento, execute:
 
 ```bash
 npm run dev
 ```
 
-### Swagger
+### 3. Acesso ao Swagger
 
-Para ver o Swagger, acesse
+Para visualizar a documentação Swagger, acesse:
 
 ```bash
 http://localhost:3000/docs
 ```
 
-## Rodando a aplicação em Produção
+## Produção
 
-Altere no `.env` o `NODE_ENV` para `production`
+## 1. Configuração do Ambiente de Produção
 
-Execute
+Altere a variável `NODE_ENV` no arquivo `.env` para `production`:
+
+```bash
+NODE_ENV=production
+```
+
+## 2. Construção da Aplicação
+
+Para construir a aplicação para produção, execute:
 
 ```bash
 npm run build
 ```
 
-Depois, execute
+## 3. Execução da Aplicação
+
+Após a construção, execute a aplicação com:
 
 ```bash
 npm run start
+```
+
+### Estrutura do projeto
+
+```bash
+.
+├── prisma
+└── src
+    ├── @types
+    ├── configs
+    ├── modules
+    │   └── example
+    └── utils
 ```
