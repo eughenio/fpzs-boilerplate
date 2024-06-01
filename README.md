@@ -8,6 +8,7 @@ Boilerplate para início de projetos com Fastify, Prisma, Zod e Swagger.
 - **Prisma**: ORM moderno e intuitivo para Node.js e TypeScript.
 - **Zod**: Biblioteca de validação e definição de esquemas para TypeScript.
 - **Swagger**: Ferramenta para documentação de APIs RESTful.
+- **Jest**: Ferramenta para testes.
 
 ## Setup
 
@@ -53,6 +54,14 @@ Para visualizar a documentação Swagger, acesse:
 
 ```bash
 http://localhost:3000/docs
+```
+
+### 4. Teste
+
+Para executar os testes, execute:
+
+```bash
+npm test
 ```
 
 ## Produção
