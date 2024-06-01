@@ -1,5 +1,5 @@
+import { app } from "@/app"; // Importa a função app que inicializa o Fastify
 import { FastifyInstance } from "fastify"; // Importa o tipo FastifyInstance do Fastify para tipagem
-import { app } from "./app.js"; // Importa a função app que inicializa o Fastify
 
 // Função assíncrona que constrói e inicia o servidor
 const build = async () => {
