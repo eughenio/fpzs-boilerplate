@@ -8,6 +8,7 @@ Boilerplate para início de projetos com Fastify, Prisma, Zod e Swagger.
 - **Prisma**: ORM moderno e intuitivo para Node.js e TypeScript.
 - **Zod**: Biblioteca de validação e definição de esquemas para TypeScript.
 - **Swagger**: Ferramenta para documentação de APIs RESTful.
+- **JWT**: Biblioteca fastify-jwt.
 - **Jest**: Ferramenta para testes.
 
 ## Setup
@@ -39,6 +40,8 @@ Altere a variável `NODE_ENV` no arquivo `.env` para `development`:
 ```bash
 NODE_ENV=development
 ```
+
+Em seguida, adicione as informações necessárias ao arquivo de tipos de dados do JWT no `@types/fastify-jwt.d.ts`.
 
 ### 2. Execução da Aplicação
 
