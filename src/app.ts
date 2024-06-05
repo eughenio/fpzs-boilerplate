@@ -10,6 +10,9 @@ import fastifySwagger from "@fastify/swagger"; // Importa o plugin do Swagger pa
 import fastifySwaggerUi from "@fastify/swagger-ui"; // Importa o plugin do Swagger UI para interface gráfica da documentação
 import Fastify from "fastify"; // Importa o framework Fastify
 import fastifyJwt from "@fastify/jwt";
+import { healthSchemas } from "./modules/health/health.schema";
+import healthRoute from "./modules/health/health.route";
+import helmet from "@fastify/helmet";
 
 // Função assíncrona que inicializa a aplicação Fastify
 export const app = async () => {
@@ -27,6 +30,7 @@ export const app = async () => {
 
   // Registra o plugin de CORS com as configurações especificadas
   await fastify.register(cors, corsConfig);
+  await fastify.register(helmet);
 
   // Condicional para registrar o Swagger se estiver habilitado nas configurações
   if (fastify.config.ENABLE_SWAGGER) {
@@ -39,12 +43,13 @@ export const app = async () => {
   }
 
   // Adiciona cada schema de exemplo à instância do Fastify
-  for (const schema of [...exampleSchemas]) {
+  for (const schema of [...exampleSchemas, ...healthSchemas]) {
     fastify.addSchema(schema);
   }
 
   // Registra a rota de exemplo com o prefixo "/example"
   await fastify.register(exampleRoute, { prefix: "/example" });
+  await fastify.register(healthRoute, { prefix: "/health" });
 
   // Retorna a instância do Fastify configurada
   return fastify;

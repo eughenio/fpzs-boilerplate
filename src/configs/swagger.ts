@@ -7,7 +7,10 @@ const swaggerConfig = {
     },
     consumes: ["application/json"],
     produces: ["application/json"],
-    tags: [{ name: "Example", description: "Exemplo de end-points" }],
+    tags: [
+      { name: "Example", description: "Exemplo de end-points" },
+      { name: "Health", description: "Rotas de healthcheck" },
+    ],
   },
 };
 
