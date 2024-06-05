@@ -2,7 +2,7 @@ const envOptions = {
   confKey: "config",
   schema: {
     type: "object",
-    required: ["NODE_ENV", "ENABLE_SWAGGER", "DATABASE_URL"],
+    required: ["NODE_ENV", "ENABLE_SWAGGER", "DATABASE_URL", "JWT_SECRET"],
     properties: {
       NODE_ENV: {
         type: "string",
@@ -13,6 +13,9 @@ const envOptions = {
         default: false,
       },
       DATABASE_URL: {
+        type: "string",
+      },
+      JWT_SECRET: {
         type: "string",
       },
     },

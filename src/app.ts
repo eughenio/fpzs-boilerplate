@@ -9,6 +9,7 @@ import fastifyEnv from "@fastify/env"; // Importa o plugin para gerenciamento de
 import fastifySwagger from "@fastify/swagger"; // Importa o plugin do Swagger para documentação da API
 import fastifySwaggerUi from "@fastify/swagger-ui"; // Importa o plugin do Swagger UI para interface gráfica da documentação
 import Fastify from "fastify"; // Importa o framework Fastify
+import fastifyJwt from "@fastify/jwt";
 
 // Função assíncrona que inicializa a aplicação Fastify
 export const app = async () => {
@@ -19,6 +20,10 @@ export const app = async () => {
 
   // Registra o plugin fastifyEnv com as configurações especificadas
   await fastify.register(fastifyEnv, envOptions);
+
+  await fastify.register(fastifyJwt, {
+    secret: fastify.config.JWT_SECRET,
+  });
 
   // Registra o plugin de CORS com as configurações especificadas
   await fastify.register(cors, corsConfig);

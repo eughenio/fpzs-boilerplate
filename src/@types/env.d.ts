@@ -6,6 +6,7 @@ declare module "fastify" {
       NODE_ENV: "development" | "stage" | "production";
       ENABLE_SWAGGER: boolean;
       DATABASE_URL: string;
+      JWT_SECRET: string;
     };
   }
 }
