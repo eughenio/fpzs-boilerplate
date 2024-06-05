@@ -9,6 +9,7 @@ Boilerplate para início de projetos com Fastify, Prisma, Zod e Swagger.
 - **Zod**: Biblioteca de validação e definição de esquemas para TypeScript.
 - **Swagger**: Ferramenta para documentação de APIs RESTful.
 - **JWT**: Biblioteca fastify-jwt.
+- **helmet**: Biblioteca fastify-helmet.
 - **Jest**: Ferramenta para testes.
 
 ## Setup
